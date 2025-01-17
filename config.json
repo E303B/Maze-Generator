@@ -1,0 +1,7 @@
+{
+    "tileColor":"red",
+    "wallColor":"black",
+    "width":20, 
+    "height":20,
+    "randomSeed":""
+}
