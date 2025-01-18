@@ -1,7 +1,15 @@
 {
     "tileColor":"red",
-    "wallColor":"black",
-    "width":20, 
-    "height":20,
-    "randomSeed":""
+    "wallColor":"dark_gray",
+    "startColor":"green",
+    "endColor":"yellow",
+    "playerColor":"cyan",
+    "hiddenColor":"black",
+    "width":50, 
+    "height":50,
+    "generator":{
+        "randomSeed":""
+    },
+    "playerSpeed":1000,
+    "lightMode":"on"
 }
