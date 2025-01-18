@@ -1,5 +1,5 @@
 # Maze Generator
-Базовая программа для генерации лабиринта, использующая библиотеку pygame. Я использовал алгоритм генерации лабиринта с [geekforgeeks](https://www.geeksforgeeks.org/random-acyclic-maze-generator-with-given-entry-and-exit-point/). Программа предназначена для базового освоения рабочих программ новичками.
+Базовая программа для генерации лабиринта, использующая библиотеку pygame. Я использовал алгоритм генерации лабиринта с [geekforgeeks](https://www.geeksforgeeks.org/random-acyclic-maze-generator-with-given-entry-and-exit-point/) с небольшими модификациями. Программа предназначена для базового освоения рабочих программ новичками.
  
 ## Настройки программы
 
