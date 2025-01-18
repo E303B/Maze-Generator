@@ -119,8 +119,8 @@ def generate(tileset: tilesystem.Tileset, startColor=(0, 255, 0), endColor=(0, 2
     
     maze=random_maze_generator(tileset.width, tileset.height, (startX, startY), (endX, endY))
     
-    for x in range(0, tileset.width-1):
-        for y in range(0, tileset.height-1):
+    for x in range(0, tileset.width):
+        for y in range(0, tileset.height):
             tile=maze[x][y]
             if tile==0:
                 tileset.tiles[x][y]=tilesystem.Tile(tileset.wallColor, isSolid=True)

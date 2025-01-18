@@ -21,14 +21,11 @@ class Tileset:
     def __init__(self, width:int=10, height:int=10, tileColor=(255, 0, 0), wallColor=(42, 42, 42), hiddenColor=(0, 0, 0)):
         self.width=max(width, 10) # Защита от слишком маленьких карт
         self.height=max(height, 10)
-        self.tiles=[]
         self.wallColor=wallColor
         self.tileColor=tileColor
         self.hiddenColor=hiddenColor
-        for x in range(0, self.width):
-            self.tiles.append([])
-            for y in range(0, self.height):
-                self.tiles[x].append(Tile(tileColor))
+        self.tiles=list(list(Tile(tileColor) for _ in range(0, self.height)) 
+                       for _ in range(0, self.width))
         
         w, h= (480, 360)  
         self.tileSize=min(round(w/self.width), round(h/self.height))
