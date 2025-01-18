@@ -79,7 +79,7 @@ def random_maze_generator(r, c, P0, Pf):
     S = stack()
     S.insert(P0) 
     while S.not_empty():
-        x, y = S.chooseRandomAndPop()
+        x, y = S.chooseRandomAndPop() # Выбираем случайную клетку
         seen[x][y] = True
         if (x + 1 < ROWS) and maze[x + 1][y] == 1 \
         and previous[x][y] != (x + 1,  y): # Защита от: координат вне карты, уже отработанных клеток и стен
