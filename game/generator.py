@@ -53,27 +53,11 @@ def random_maze_generator(r, c, P0, Pf):
                            for _ in range(ROWS))
     previous = list(list((-1, -1) 
      for _ in range(COLS)) for _ in range(ROWS))
- 
     S = stack()
-     
-    
     S.insert(P0) 
- 
-    
-     
-    # (create)
     while S.not_empty():
- 
-        
-        
         x, y = S.pop()
         seen[x][y] = True
- 
-        
-         
-        
-         
-        
         if (x + 1 < ROWS) and maze[x + 1][y] == 1 \
         and previous[x][y] != (x + 1,  y):
             continue
@@ -86,80 +70,30 @@ def random_maze_generator(r, c, P0, Pf):
         if (y > 0) and maze[x][y-1] == 1 \
         and previous[x][y] != (x, y-1):
             continue
- 
-        
         maze[x][y] = 1
- 
-         
-        # insertion
         to_stack = []
- 
-         
-        
-        
- 
-        
         if (x + 1 < ROWS) and seen[x + 1][y] == False:
-             
-            
             seen[x + 1][y] = True
-             
-             
-            
             to_stack.append((x + 1,  y))
-             
-             
-            
             previous[x + 1][y] = (x, y)
-         
         if (0 < x) and seen[x-1][y] == False:
-             
-            
             seen[x-1][y] = True
-             
-             
-            
             to_stack.append((x-1,  y))
-             
-             
-            
             previous[x-1][y] = (x, y)
-         
         if (y + 1 < COLS) and seen[x][y + 1] == False:
-             
-            
             seen[x][y + 1] = True
-             
-             
-            
             to_stack.append((x, y + 1))
-             
-            
-            
             previous[x][y + 1] = (x, y)
          
         if (y > 0) and seen[x][y-1] == False:
-             
-            
             seen[x][y-1] = True
-             
-             
-            
             to_stack.append((x, y-1))
-             
-             
-            
             previous[x][y-1] = (x, y)
          
         
         pf_flag = False
         while len(to_stack):
-             
-            
             neighbour = to_stack.pop(randint(0, len(to_stack)-1))
-             
-            
-            
             if neighbour == Pf:
                 pf_flag = True
              
