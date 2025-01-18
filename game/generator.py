@@ -75,19 +75,11 @@ def random_maze_generator(r, c, P0, Pf):
     seen = list(list(False for _ in range(COLS)) 
                            for _ in range(ROWS))
     previous = list(list((-1, -1) 
-<<<<<<< Updated upstream
      for _ in range(COLS)) for _ in range(ROWS))
     S = stack()
     S.insert(P0) 
     while S.not_empty():
         x, y = S.pop()
-=======
-     for _ in range(COLS)) for _ in range(ROWS)) # Генерация пустой карты клеток, которые являются предыдущими для данной клетки
-    S = stack() # Главный стэк
-    S.insert(P0) # Добавление начальных координат в стэк
-    while S.not_empty(): # Через цикл, пока обрабатывается клетка, она, по возможности, будет добавлять новые соседние клеки. В конце концов, все клетки будут разобраны
-        x, y = S.chooseRandomAndPop() # Получение перевого элемента в стеке и его конвертация в координаты
->>>>>>> Stashed changes
         seen[x][y] = True
         if (x + 1 < ROWS) and maze[x + 1][y] == 1 \
         and previous[x][y] != (x + 1,  y):
