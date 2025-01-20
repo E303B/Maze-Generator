@@ -39,3 +39,11 @@
 - https://www.geeksforgeeks.org/pygame-tutorial/ - почитать про PyGame
 - https://ru.wikipedia.org/wiki/Стек - почитать про стек
 - https://en.wikipedia.org/wiki/Maze_generation_algorithm - почитать про алгоритмы генерации лабиринтов(АНГ)
+
+## Примеры генерации
+
+![1](https://github.com/E303B/Maze-Generator/blob/main/img/example1.png)
+
+![2](https://github.com/E303B/Maze-Generator/blob/main/img/example2.png)
+
+![3](https://github.com/E303B/Maze-Generator/blob/main/img/example3.png)
